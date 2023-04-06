@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #5a5a5a;
+}
+
+.nav-bar {
+  background-color: #1e1e1f;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+
+.logo {
+  padding: 0 100px;
+  margin-top: 1vh;
+}
+
+.active {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.nav-bar ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.nav-bar ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.nav-bar ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.nav-checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  margin-top: 10px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  .nav-bar ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .nav-checkbtn {
+    display: block;
+  }
+  .nav-bar ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transform: all 0.5s;
+  }
+
+  .nav-bar ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+
+  #navCheck:checked ~ ul {
+    left: 0;
+  }
+}
+
+#navCheck {
+  display: none;
+}
+
+.search-form {
+  width: 100%;
+  border: 1px solid rgb(82, 74, 235);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+
+.search-form .search-icon {
+  width: 30px;
+  padding-left: 10px;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 10px;
+}

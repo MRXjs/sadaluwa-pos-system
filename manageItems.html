@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>සඳළුව</title>
+    <link rel="stylesheet" href="./css//style.css" />
+    <link rel="stylesheet" href="./css//manageItems.css" />
+    <script src="./js/sweetAlert2/sweetAlert.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/api.js" defer></script>
+    <script src="./js/manageItems.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="nav-bar">
+        <input type="checkbox" id="navCheck" />
+        <label for="navCheck" class="nav-checkbtn">
+          <img src="./img/icon/menu.png" width="50px" alt="" />
+        </label>
+        <img src="./img/Logo.png" class="logo" alt="" />
+        <ul>
+          <li class="navItems">
+            <a href="./index.html" id="bilpathKirima">බිල්පත් කිරීම</a>
+          </li>
+          <li class="navItems">
+            <a href="./manageItems.html" id="bandaKalamanakaranaya">
+              භාණ්ඩ කළමනාකරණය
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-container">
+      <div class="add-items-main-con">
+        <h1 class="add-items-form-title" id="addItemsFormTitle">
+          භාණ්ඩ එකතු කරන්න
+        </h1>
+        <form action="#">
+          <div class="item-main-info">
+            <div class="item-input-box">
+              <label for="itemName">භාණ්ඩයෙ නම</label>
+              <input
+                type="text"
+                id="itemName"
+                placeholder="භාණ්ඩයෙ නම ඇතුළත් කරන්න"
+              />
+            </div>
+
+            <div class="item-input-box">
+              <label for="itemSearchKeyword">භාණ්ඩයෙ සෙවුම් මූල් පද</label>
+              <input
+                type="text"
+                id="itemSearchKeyword"
+                placeholder="භාණ්ඩයෙ සෙවුම් මූල් පද ඇතුළත් කරන්න"
+              />
+            </div>
+
+            <div class="item-input-box">
+              <label for="retailPrice">සිල්ලර මිල</label>
+              <input
+                class="green-input"
+                type="number"
+                id="itemRetailPrice"
+                placeholder="භාණ්ඩයෙ සිල්ලර මිල ඇතුළත් කරන්න"
+              />
+            </div>
+            <div class="item-input-box">
+              <label>තොග මිල</label>
+              <input
+                class="green-input"
+                type="number"
+                id="itemwholesalePrice"
+                placeholder="භාණ්ඩයෙ තොග මිල ඇතුළත් කරන්න"
+              />
+            </div>
+            <div class="item-input-box">
+              <label>කේස් මිල</label>
+              <input
+                class="green-input"
+                type="number"
+                id="casePrice"
+                placeholder="කේස් මිල ඇතුළත් කරන්න"
+              />
+            </div>
+            <div class="item-input-box">
+              <label>ප්‍රමානය</label>
+              <input
+                type="number"
+                placeholder="අන්තර්ගත කිලො හො කැට ප්‍රමානය"
+                id="ItemQuantity"
+              />
+            </div>
+            <span class="line-brake"></span>
+            <div class="item-input-box">
+              <label for="itemUnitPrice"> ඒකකයකට මිල</label>
+              <div class="item-unit-price-options">
+                <div id="itemUnitPriceOptions" class="item-unit-price-options">
+                  <div class="item-unit-price-options-second-div">
+                    <select
+                      name=""
+                      id="unitOptionSelect0"
+                      class="unitOptionSelectClass green-input"
+                    >
+                      <option value="මිටි">මිටි</option>
+                      <option value="කිලෝ">කිලෝ</option>
+                      <option value="කේස්">කේස්</option>
+                      <option value="පැකට්">පැකට්</option>
+                      <option value="බන්ඩල්">බන්ඩල්</option>
+                      <option value="කෑලි">කෑලි</option>
+                      <option value="කාඩ්">කාඩ්</option>
+                      <option value="බෝතල්">බෝතල්</option>
+                      <option value="පැක්">පැක්</option>
+                      <option value="Gross">Gross</option>
+                      <option value="වැල්">වැල්</option>
+                      <option value="වැල් පැකට්">වැල් පැකට්</option>
+                      <option value="කැට">කැට</option>
+                      <option value="ටින්">ටින්</option>
+                      <option value="කොල">කොල</option>
+                      <option value="පෙට්ටි">පෙට්ටි</option>
+                      <option value="කප්">කප්</option>
+                      <option value=" "></option>
+                    </select>
+                    <input
+                      class="unitOptionInputClass green-input"
+                      type="number"
+                      name="itemUnitPrice"
+                      class="unitOptionInputClass"
+                    />
+                  </div>
+                </div>
+
+                <button class="plus-btn" id="itemUnitPricePlus">+</button>
+              </div>
+            </div>
+            <span class="line-brake"></span>
+            <div class="item-input-box">
+              <label>පරාසය අනුව මිල</label>
+              <div class="price-by-range-option">
+                <div
+                  id="priceByRangeOptionInputCon"
+                  style="display: flex; flex-direction: column"
+                >
+                  <div
+                    id="priceByRangeOptionInputConSecond0"
+                    class="price-by-range-option-InputConSecond"
+                  >
+                    <input
+                      type="number"
+                      id="unitPerPriceInputF0"
+                      class="unit-per-price-inputF"
+                      value="0"
+                      disabled
+                    />
+                    <span>TO</span>
+                    <input
+                      type="number"
+                      id="unitPerPriceInputS0"
+                      class="unit-per-price-inputS"
+                    />
+                    <span>=</span>
+                    <span id="itemwholesalePriceLable0"></span>
+                    <span>+</span>
+                    <input
+                      type="number"
+                      id="unitPerPriceRangePrice0"
+                      class="unit-per-price-range-price"
+                    />
+                    <span id="priceByRangeTotal0"></span>
+                  </div>
+                </div>
+                <button class="plus-btn" id="unitPerPricePlus">+</button>
+              </div>
+            </div>
+            <span class="line-brake"></span>
+            <div class="item-input-box">
+              <label>භාන්ඩය තිබෙද?</label>
+              <select name="" id="itemAvalability">
+                <option value="true">තිබෙ</option>
+                <option value="false">නැත</option>
+              </select>
+            </div>
+
+            <div class="item-input-box">
+              <label for="itemwholesalePrice">සටහන</label>
+              <textarea id="itemNote" class="item-note"></textarea>
+            </div>
+          </div>
+          <div class="form-submit-btn" id="formSubmitBtnContainer">
+            <input
+              type="submit"
+              id="ItemFormSubmitBtn"
+              value="භාණ්ඩය එකතු කරන්න"
+            />
+          </div>
+        </form>
+      </div>
+
+      <div class="data-table-container">
+        <div class="data-table-title">භාණ්ඩ ලැයිස්තුව</div>
+        <form class="search-form">
+          <img
+            src="./img/icon/search.png"
+            alt="search icon"
+            class="search-icon"
+          />
+          <input
+            type="text"
+            name=""
+            id="seachItem"
+            placeholder="අයිතම සොයන්න"
+          />
+        </form>
+        <div class="table-container">
+          <table class="item-table" id="itemUpdateTable">
+            <thead>
+              <tr>
+                <th>භාණ්ඩයෙ නම</th>
+                <th>කේස් මිල</th>
+                <th>තොග මිල</th>
+                <th>සිල්ලර මිල</th>
+              </tr>
+            </thead>
+            <tbody id="itemTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

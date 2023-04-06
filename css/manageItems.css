@@ -1,0 +1,398 @@
+/* Manage item */
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #5a5a5a;
+}
+
+.line-brake {
+  width: 100%;
+  background-color: white;
+  height: 1px;
+  margin: 5px 0;
+}
+.delete-btn {
+  cursor: pointer;
+  padding: 5px;
+  color: white;
+  background-color: #ff2c2c;
+  width: 5vw;
+}
+
+.delete-btn:hover {
+  background-color: #ff8080;
+  color: black;
+}
+
+.edit-btn {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #ffb71c;
+  color: black;
+  width: 5vw;
+}
+
+.edit-btn:hover {
+  background-color: #f3c460;
+}
+
+.add-items-main-con {
+  margin: 0 28px;
+  margin-top: 10vh;
+
+  width: 100%;
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 28px;
+
+  border-radius: 10px;
+  box-shadow: inset -2px 2px 2px white;
+  overflow-y: scroll;
+  height: 90vh;
+}
+
+.add-items-main-con::-webkit-scrollbar {
+}
+
+.add-items-form-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  border-bottom: solid 1px white;
+}
+
+.update-items-form-title {
+  color: #f3c460;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  text-shadow: 2px 2px 2px black;
+  border-bottom: solid 1px white;
+}
+
+.item-main-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-direction: column;
+}
+
+.item-input-box:nth-child(2n) {
+  justify-content: end;
+}
+
+.item-input-box {
+  display: flex;
+  width: 100%;
+  padding-bottom: 15px;
+  flex-direction: row;
+}
+
+.item-input-box label {
+  width: 50%;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.item-input-box input {
+  height: 40px;
+  width: 95%;
+  border-radius: 7px;
+  outline: none;
+  border: 1px solid gray;
+  padding: 0 10px;
+}
+
+.item-input-box input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+.unit-per-price-inputF {
+  color: white;
+}
+
+.green-input {
+  background-color: rgba(4, 145, 47, 0.979);
+  color: white;
+}
+
+.green-input::placeholder {
+  color: white;
+}
+
+.plus-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.price-range-close-btn {
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 20%;
+  background-color: #fc4d4d;
+}
+
+.price-range-close-btn:hover {
+  color: white;
+  background-color: #ff2c2c;
+}
+
+.option-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #ff2c2c;
+}
+option-close-btn:hover {
+  background-color: #fc4d4d;
+}
+
+.item-unit-price-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.item-unit-price-options-second-div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
+.item-unit-price-options select {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.price-by-range-option {
+}
+
+.price-by-range-option div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.price-by-range-option span {
+  color: white;
+  font-weight: 600;
+  margin: 5px;
+}
+
+/* .item-avalable-select {
+  width: 100px;
+} */
+
+/* search tab box */
+.tag-box-wrapper {
+  width: 490px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 18px 25px 20px;
+}
+
+.tag-box-wrapper :where(li, li, img, .tag-box-details) {
+  display: flex;
+  align-items: center;
+}
+
+.tag-box-wrapper p {
+  font-size: 15;
+}
+
+.tag-box-wrapper ul {
+  display: flex;
+  padding: 7px;
+  margin: 12px 0;
+  border-radius: 5px;
+  border: 1px solid #a6a6a6;
+}
+
+.tag-box-wrapper ul li {
+  list-style: none;
+  margin: 4px 3px;
+  padding: 5px 8px 5px 10px;
+  background-color: #f2faf2;
+  border-radius: 5px;
+  border: 1px solid #e3d1e1;
+}
+
+.tag-box-wrapper ul li img {
+  width: 20px;
+  height: 20px;
+  background-color: #dfdfdf;
+  border-radius: 50%;
+  margin-left: 8px;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.tag-box-wrapper .tag-box-details {
+  justify-content: space-between;
+}
+
+.tag-box-details button {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 9px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: #5372f0;
+}
+
+.tag-box-wrapper ul input {
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+
+.form-submit-btn {
+  margin-top: 10px;
+  display: flex;
+}
+
+.form-submit-btn input {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  color: rgb(209, 209, 209);
+  background: rgba(63, 114, 76, 0.7);
+  margin: 5px;
+}
+
+.form-submit-btn input:hover {
+  background: rgba(56, 204, 93, 0.7);
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+  .add-items-main-con {
+    min-width: 280px;
+  }
+  .item-input-box {
+    margin-bottom: 12px;
+    width: 100%;
+  }
+  .item-input-box:nth-child(2n) {
+    justify-content: space-between;
+  }
+  .item-main-info {
+    max-height: 380px;
+    overflow: auto;
+  }
+  .item-main-info::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.data-table-container {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height: 70vh;
+}
+
+.table-container {
+  overflow-y: scroll;
+  height: 70vh;
+}
+
+.item-table {
+}
+
+.data-table-title {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 6px;
+  border-bottom: solid 1px white;
+  margin-bottom: 3vh;
+  color: white;
+}
+
+.item-table th td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.item-table tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.item-table tr:nth-child(odd) {
+  color: white;
+}
+
+.item-table th {
+  background-color: #333333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 25px;
+}
+
+.volume-per-unit {
+  display: flex;
+  flex-direction: column;
+}
+
+#itemAvalability {
+  background-color: green;
+  color: white;
+}
+
+.item-note {
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+}
+
+.update-item-form-submit {
+  background-color: #ffb71c !important;
+  color: black !important;
+}
+
+.update-item-form-submit:hover {
+  background-color: #f3c460 !important;
+}
+
+.update-cancel-btn {
+  background-color: rgb(250, 0, 0) !important;
+  color: white !important;
+}
+
+.update-cancel-btn:hover {
+  background-color: #fc4d4d !important;
+  color: white !important;
+}
+
+.item-table-data {
+  font-size: 20px;
+}
